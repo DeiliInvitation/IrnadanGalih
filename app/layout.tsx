@@ -1,16 +1,30 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Great_Vibes, Parisienne, Cinzel, Poppins } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const greatVibes = Great_Vibes({
+  subsets: ["latin"],
+  variable: "--font-great-vibes",
+  display: "swap",
+  weight: ["400"],
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const parsienne = Parisienne({
+  subsets: ["latin"],
+  variable: "--font-parisienne",
+  display: "swap",
+  weight: ["400"],
+});
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-great-vibes",
+  display: "swap",
+  weight: ["400","500","600","700","800"],
+});
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  display: "swap",
+  weight: ["400","500","600","700","800"],
 });
 
 export const metadata: Metadata = {
@@ -26,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${greatVibes.variable} ${parsienne.variable} ${cinzel.variable} ${poppins.variable} antialiased`}
       >
         {children}
       </body>
