@@ -4,4 +4,9 @@
 
 html{
   box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.guest-message{
+  scrollbar-width: thin;
 }
