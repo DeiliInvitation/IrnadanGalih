@@ -40,7 +40,7 @@ const Resepsi: React.FC = () => {
           <BiMap /> Google Maps
         </Link>
       </div>
-      <p className="p-5 font-poppins text-center text-xs">"Segala sesuatu Kami ciptakan berpasang-pasangan agar kamu <br />mengingat (kebesaran Allah)." <br />(QS. Az-zariyat : 49)</p>
+      <p className="p-5 font-poppins text-center text-xs">&quot;Segala sesuatu Kami ciptakan berpasang-pasangan agar kamu <br />mengingat (kebesaran Allah).&quot; <br />(QS. Az-zariyat : 49)</p>
     </div>
   );
 };
