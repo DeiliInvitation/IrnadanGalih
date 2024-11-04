@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${greatVibes.variable} ${parisienne.variable} ${cinzel.variable} ${poppins.variable} ${darumadrop.variable} antialiased`}
+        className={`${greatVibes.variable} ${parisienne.variable} ${cinzel.variable} ${poppins.variable}  ${darumadrop.variable} antialiased`}
       >
         {children}
       </body>
