@@ -1,9 +1,50 @@
-const Music: React.FC = () => {
-    return(
-        <div>
+"use client";
 
-        </div>
-    )
- }
+import React, { useState, useEffect, forwardRef, useRef, MutableRefObject } from "react";
+import { PiMusicNotesFill } from "react-icons/pi";
+import { TbMusicOff } from "react-icons/tb";
 
- export default Music;
+const Music = forwardRef<HTMLAudioElement | null>((_, ref) => {
+  const [isMuted, setIsMuted] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  useEffect(() => {
+    const musicRef = (ref as MutableRefObject<HTMLAudioElement | null>)?.current || audioRef.current;
+    if (musicRef) {
+      musicRef.muted = isMuted;
+      musicRef.play().catch((error: unknown) => {
+        console.log("Autoplay failed:", error);
+      });
+    }
+  }, [isMuted, ref]);
+
+  const toggleMute = () => {
+    const musicRef = (ref as MutableRefObject<HTMLAudioElement | null>)?.current || audioRef.current;
+    if (musicRef) {
+      musicRef.muted = !musicRef.muted;
+      setIsMuted(!isMuted);
+    }
+  };
+
+  return (
+    <>
+      <div className="hidden">
+        <audio loop ref={ref || audioRef}>
+          <source src="music/Lucky.mp3" />
+        </audio>
+      </div>
+
+      <button
+        onClick={toggleMute}
+        aria-label={isMuted ? "Unmute music" : "Mute music"}
+        className="fixed bottom-5 right-5 bg-gray-800 text-white p-2 rounded-full z-50"
+      >
+        {isMuted ? <PiMusicNotesFill size={30} /> : <TbMusicOff size={30} />}
+      </button>
+    </>
+  );
+});
+
+Music.displayName = "Music";
+
+export default Music;

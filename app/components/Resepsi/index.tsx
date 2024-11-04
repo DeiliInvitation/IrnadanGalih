@@ -11,7 +11,7 @@ const Resepsi: React.FC = () => {
         <div className="absolute top-0 left-0">
           <Image src={particle1} alt="particle" className="w-[129px]" />
         </div>
-        <p className="font-poppins p-5 text-center">
+        <p className="font-poppins p-5 text-center text-sm">
           Tanpa mengurangi rasa hormat, <br />
           kami mengundang Bapak/Ibu/Saudara/i <br />
           untuk menghadiri acara pernikahan kami.
@@ -36,7 +36,7 @@ const Resepsi: React.FC = () => {
             Daerah Khusus Ibukota Jakarta
           </p>
         </div>
-        <Link href="" className="flex items-center gap-1 text-sm bg-white bg-opacity-25 py-1 px-3 rounded-full">
+        <Link href="https://maps.app.goo.gl/dSuH5BGgG4ceRyLa8" className="flex items-center gap-1 text-sm bg-white bg-opacity-25 py-1 px-3 rounded-full border-2 border-transparent hover:border-white hover:scale-105 transition-all duration-500">
           <BiMap /> Google Maps
         </Link>
       </div>
