@@ -37,9 +37,9 @@ const Music = forwardRef<HTMLAudioElement | null>((_, ref) => {
       <button
         onClick={toggleMute}
         aria-label={isMuted ? "Unmute music" : "Mute music"}
-        className="fixed bottom-5 right-5 bg-gray-800 text-white p-2 rounded-full z-50"
+        className="fixed bottom-5 right-5 bg-gray-300 text-bgBlue p-2 rounded-full z-50"
       >
-        {isMuted ? <PiMusicNotesFill size={30} /> : <TbMusicOff size={30} />}
+        {isMuted ? <TbMusicOff size={30} /> : <PiMusicNotesFill size={30} />}
       </button>
     </>
   );
