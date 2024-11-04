@@ -4,7 +4,7 @@ import LoveStory from "./components/LoveStory";
 import WeddingGift from "./components/WeddingGift";
 import Wishes from "./components/Wishes";
 import Footer from "@/components/Footer";
-import Music from "@/components/Music";
+import Musics from "@/components/Musics";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       <Wishes />
       <Divider className="scale-150 md:scale-125 rotate-180 min-w-[375px] object-cover object-bottom -mt-[5%] -mb-20 sm:-mb-24 md:-mb-28 lg:-mb-32" />
       <Footer />
-      <Music />
+      <Musics />
     </div>
   );
 }

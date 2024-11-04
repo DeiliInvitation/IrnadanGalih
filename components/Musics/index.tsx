@@ -4,7 +4,7 @@ import React, { useState, useEffect, forwardRef, useRef, MutableRefObject } from
 import { PiMusicNotesFill } from "react-icons/pi";
 import { TbMusicOff } from "react-icons/tb";
 
-const Music = forwardRef<HTMLAudioElement | null>((_, ref) => {
+const Musics = forwardRef<HTMLAudioElement | null>((_, ref) => {
   const [isMuted, setIsMuted] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -45,6 +45,6 @@ const Music = forwardRef<HTMLAudioElement | null>((_, ref) => {
   );
 });
 
-Music.displayName = "Music";
+Musics.displayName = "Musics";
 
-export default Music;
+export default Musics;
