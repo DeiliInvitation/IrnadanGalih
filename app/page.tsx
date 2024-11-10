@@ -1,3 +1,6 @@
+"use client"
+
+import { useEffect } from "react";
 import Divider from "@/components/Divider";
 import GuestInvitation from "./components/GuestInvitation";
 import LoveStory from "./components/LoveStory";
@@ -7,6 +10,10 @@ import Footer from "@/components/Footer";
 import Musics from "@/components/Musics";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="flex flex-col items-center w-full relative overflow-hidden">
       <Divider className="scale-150 md:scale-125 -mt-[15%] -mb-[7%] md:-mt-[13%] lg:-mt-[10%]" />

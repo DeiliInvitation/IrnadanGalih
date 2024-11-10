@@ -11,10 +11,15 @@ const Musics = forwardRef<HTMLAudioElement | null>((_, ref) => {
   useEffect(() => {
     const musicRef = (ref as MutableRefObject<HTMLAudioElement | null>)?.current || audioRef.current;
     if (musicRef) {
-      musicRef.muted = isMuted;
-      musicRef.play().catch((error: unknown) => {
-        console.log("Autoplay failed:", error);
-      });
+      musicRef.muted = isMuted; 
+      const playMusic = async () => {
+        try {
+          await musicRef.play();
+        } catch (error) {
+          console.log("Autoplay failed, user interaction needed:", error);
+        }
+      };
+      playMusic();
     }
   }, [isMuted, ref]);
 

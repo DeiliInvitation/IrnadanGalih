@@ -121,7 +121,7 @@ const Wishes: React.FC = () => {
       <div className="-mb-[50px] z-20">
         <Image src={bunga} alt="bunga" className="w-32" />
       </div>
-      <div className="guest-message border-2 border-bgBlue w-full h-[340px] overflow-y-auto overflow-x-hidden px-3 py-8 flex flex-col gap-3 justify-center items-center">
+      <div className="guest-message border-2 border-bgBlue w-full h-[340px] overflow-y-scroll overflow-x-hidden px-3 py-8 flex flex-col gap-3 justify-start items-center">
         {loading ? (
           <p>Loading...</p>
         ) : error ? (
@@ -130,7 +130,7 @@ const Wishes: React.FC = () => {
           <p>No guests to display.</p>
         ) : (
           guests.map((guest, index) => (
-            <div key={guest._id} className={`border-b-[1px] border-bgBlue flex flex-col gap-1 pb-2 w-full ${index === guests.length - 1 ? "border-none" : ""}`}>
+            <div key={index} className={`border-b-[1px] border-bgBlue flex flex-col gap-1 pb-2 w-full ${index === guests.length - 1 ? "border-none" : ""}`}>
               <h3 className="text-sm font-bold">{guest.Name}</h3>
               <p>{guest.Message}</p>
             </div>
