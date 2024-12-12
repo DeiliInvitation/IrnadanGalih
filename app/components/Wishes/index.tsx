@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import { useGetGuestsByClient, usePostGuest } from "@/hooks/useInvitation";
 import bunga from "@/public/bunga2.png";
 import { motion, useInView } from "framer-motion";
+import Link from "next/link";
+import { FaInstagram } from "react-icons/fa";
 
 const clientId = process.env.NEXT_PUBLIC_CLIENT_ID || "";
 const MAX_MESSAGE_LENGTH = 300;
@@ -138,6 +140,8 @@ const Wishes: React.FC = () => {
         )}
       </div>
       <p className="font-greatVibes text-2xl mt-3">See you on our happy day!</p>
+
+      <Link href="https://www.instagram.com/ar/1238227160589584" className="z-50 font-cinzel bg-white rounded-full text-red-600 py-1 px-5 w-fit self-center border-4 border-red-400 hover:border-red-200 transition-all duration-500 hover:scale-105 text-lg font-semibold flex items-center gap-2">Try the IG Filter <FaInstagram /></Link>
     </motion.div>
   );
 };

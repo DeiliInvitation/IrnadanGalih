@@ -34,7 +34,7 @@ const GuestInvitation: React.FC = () => {
           Putri Irna Mardiasih
         </h2>
         <p className="font-poppins text-[10px]">
-          (Anak pertama Bapak Irmawan & Ibu Wahyu Esti Hartina)
+          (Anak pertama Bapak Irmawan & Ibu Wahyu Esti Hartina  )
         </p>
       </div>
       <p className="font-greatVibes text-[64px]">&</p>
